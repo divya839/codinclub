@@ -1,0 +1,54 @@
+echo "Enter Three Inputs"
+read a b c
+result=`expr $a + $b \* $c`
+echo "Result: $result"
+
+****************************************
+echo "Enter Three Inputs"
+read a b c
+result1=`expr $a \* $b + $c`
+echo "Result: $result1"
+****************************************
+echo "Enter Three Inputs"
+read a b c
+result2=`expr $c + $a / $b`
+echo "Result: $result2"
+****************************************
+echo "Enter Three Inputs"
+read a b c
+result3=`expr $a % $b + $c`
+echo "Result: $result3"
+****************************************Dictonary Part*********************
+
+$ declare -A associative
+
+
+
+bitarray>declare -A associative
+bitarray>associative[key1]=result
+bitarray>associative[key2]=result1
+bitarray>associative[key3]=result2
+bitarray>associative[key4]=result3
+bitarray>
+
+
+
+bitarray>echo ${associative[key1]}
+result
+bitarray>echo ${associative[key2]}
+result1
+bitarray>echo ${associative[key3]}
+result2
+bitarray>echo ${associative[key4]}
+result3
+
+
+bitarray>echo ${associative[@]}
+
+*******************************************************************************************
+bitarray>for i in ${!associative[@]}; do
+> echo $i ${associative[$i]}
+> done
+key3 
+key2 
+bitarray>
